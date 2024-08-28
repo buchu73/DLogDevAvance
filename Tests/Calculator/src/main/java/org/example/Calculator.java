@@ -20,6 +20,15 @@ public class Calculator {
         }
     }
 
+    public String divStringBis(int a, int b) {
+        if (b == 0){
+            return "Cannot divide by zero";
+        }
+
+        int result = a/b;
+        return String.valueOf(result);
+    }
+
     public double divDouble(double a, double b) throws ArithmeticException{
         return a / b;
     }

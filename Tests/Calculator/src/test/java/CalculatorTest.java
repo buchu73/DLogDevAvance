@@ -31,6 +31,9 @@ public class CalculatorTest {
         {
             Assertions.assertEquals("/ by zero", e.getMessage());
         }
+        catch (Exception ex){
+            Assertions.fail();
+        }
     }
 
     @Test
@@ -61,6 +64,6 @@ public class CalculatorTest {
     public void test_Div_Double() {
         Calculator target = new Calculator();
         double result = target.divDouble(10, 3.0);
-        Assertions.assertEquals(3.3333, result, 0.0001); // 0.0001 est la marge d'erreur acceptable pour comparer des doubles
+        Assertions.assertEquals(3.33333, result, 0.00001);
     }
 }
